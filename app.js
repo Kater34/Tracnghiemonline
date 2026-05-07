@@ -518,6 +518,21 @@ function openStudyGuide() {
     showView('view-study-guide');
 }
 
+// ----------------------------------------
+// CẬP NHẬT TRUY CẬP
+// ----------------------------------------
+function updateViewCounters() {
+    // Lượt truy cập dựa vào LocalStorage
+    let totalViews = localStorage.getItem('total_site_views');
+    if (!totalViews) totalViews = 0; // Bắt đầu từ số 0
+    totalViews = parseInt(totalViews) + 1;
+    localStorage.setItem('total_site_views', totalViews);
+    
+    const viewsEl = document.getElementById('total-views');
+    if(viewsEl) viewsEl.innerText = totalViews.toLocaleString('vi-VN');
+}
+updateViewCounters();
+
 function renderStudyGuideList(qArr, container, startIndex) {
     let currentIndex = startIndex;
     qArr.forEach((qData) => {
