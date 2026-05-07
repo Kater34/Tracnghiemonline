@@ -1,0 +1,134 @@
+:root {
+    --bg: #1a1a1a; --card: #242424; --text: #fff; --primary: #2b5ef2;
+    --red: #ef4444; --green: #22c55e; --yellow: #eab308;
+    --border: #333;
+}
+body { margin: 0; font-family: sans-serif; background: var(--bg); color: var(--text); overflow-x: hidden; }
+.view-section { display: none; min-height: 100vh; flex-direction: column;}
+.view-section.active { display: flex; }
+
+.top-header { background: var(--primary); padding: 10px 20px; font-weight: bold; display: flex; justify-content: space-between; align-items: center; height: 40px;}
+.top-header button { background: transparent; border: none; color: white; cursor: pointer; font-size: 14px; display: flex; align-items: center; gap: 5px;}
+
+.container { max-width: 800px; margin: 0 auto; padding: 20px; width: 100%; box-sizing: border-box; }
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px; }
+.card { background: #1f1f1f; border: 1px solid #333; padding: 15px; border-radius: 8px; cursor: pointer; display: flex; align-items: center; gap: 15px; transition: 0.2s; }
+.card:hover { border-color: var(--primary); }
+.card-icon { width: 45px; height: 45px; background: #242424; border-radius: 8px; display: flex; justify-content: center; align-items: center; color: var(--primary); transition: 0.2s; flex-shrink: 0; }
+.card:hover .card-icon { background: var(--primary); color: white; }
+.card-content h3 { margin: 0 0 5px 0; font-size: 15px; color: white; font-weight: bold; }
+.card-meta { display: flex; align-items: center; gap: 5px; font-size: 12px; color: #888; margin-bottom: 5px; }
+.card-content p { margin: 0; font-size: 12px; color: #666; }
+
+.menu-container { max-width: 600px; }
+
+/* Option Cards (Thi Thử, Ôn Tập, Đề Cương) */
+.option-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; margin-bottom: 15px; position: relative; overflow: hidden;}
+.option-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; z-index: 10; }
+.option-card.red::before { background-color: var(--red); }
+.option-card.green::before { background-color: var(--green); }
+.option-card.yellow::before { background-color: var(--yellow); }
+
+.option-header { padding: 20px 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: 0.2s;}
+.option-header:hover { background: #2a2a2a; }
+.option-header h3 { margin: 0 0 5px 0; color: white;}
+.option-header p { margin: 0; color: #999; font-size: 14px;}
+
+/* Menu xổ xuống (Dropdown Options) */
+.expanded-options { padding: 0 25px 20px 25px; border-top: 1px solid var(--border); margin-top: 5px; padding-top: 15px; background: var(--card);}
+.expanded-options p { margin: 0 0 10px 0; font-size: 14px; color: #ccc;}
+.expanded-options button, .expanded-options select { width: 100%; padding: 12px; margin-bottom: 15px; background: transparent; border: 1px solid var(--border); color: white; border-radius: 4px; cursor: pointer; font-size: 14px;}
+.expanded-options select option { background-color: var(--bg); color: white; }
+.expanded-options button:hover { background: #333; }
+.expanded-options .primary-btn { background: var(--primary); border: none; font-weight: bold; }
+.expanded-options .primary-btn:hover { background: #1d4ed8; }
+.dropdown-icon { color: gray; font-size: 14px; transition: transform 0.3s;}
+.dropdown-icon.open { transform: rotate(180deg); }
+
+/* Giao diện Chia đôi màn hình lúc làm bài */
+.quiz-layout { display: flex; flex: 1; overflow: hidden; }
+.quiz-main { flex: 1; display: flex; flex-direction: column; overflow-y: auto;}
+.quiz-info-bar { display: flex; justify-content: space-between; padding: 15px 30px; border-bottom: 1px solid var(--border); font-size: 14px; color: #aaa;}
+.quiz-info-bar span { font-weight: bold; }
+.quiz-info-bar .timer { color: var(--red); }
+
+.question-content { padding: 30px; flex: 1; max-width: 800px; margin: 0 auto; width: 100%; box-sizing: border-box;}
+.question-content h3 { margin-top: 0; color: #ccc; font-weight: normal; font-size: 1.1rem;}
+.question-content p { font-size: 1.2rem; margin-bottom: 30px;}
+
+.options-grid { display: flex; flex-direction: column; gap: 15px; }
+.opt-btn { background: transparent; border: 1px solid #555; color: white; padding: 15px; border-radius: 8px; cursor: pointer; text-align: left; font-size: 1rem; display: flex; align-items: center; gap: 15px;}
+.opt-btn:hover { background: #2a2a2a; border-color: #888;}
+.opt-btn.correct { background: rgba(34, 197, 94, 0.1) !important; border-color: var(--green); }
+.opt-btn.wrong { background: rgba(239, 68, 68, 0.1) !important; border-color: var(--red); }
+
+/* Vòng tròn tích chọn đáp án */
+.opt-circle { width: 16px; height: 16px; border-radius: 50%; border: 2px solid #777; display: inline-block; flex-shrink: 0;}
+.opt-btn.correct .opt-circle { background: var(--green); border-color: var(--green); }
+.opt-btn.wrong .opt-circle { background: var(--red); border-color: var(--red); }
+
+.quiz-footer { display: flex; justify-content: space-between; align-items: center; padding: 20px 30px; border-top: 1px solid var(--border); background: var(--bg);}
+.quiz-footer button { background: transparent; color: white; border: 1px solid #555; border-radius: 5px; cursor: pointer; font-size: 14px; padding: 10px 20px;}
+.quiz-footer button:hover { background: #333;}
+.quiz-footer .primary-btn { background: var(--primary); border: none; font-weight: bold;}
+.quiz-footer .primary-btn:hover { background: #1d4ed8;}
+
+/* Sidebar danh sách câu hỏi (Lưới phải) */
+.quiz-sidebar { width: 320px; background: #1c1c1c; border-left: 1px solid var(--border); display: flex; flex-direction: column;}
+.sidebar-header { padding: 15px 20px; border-bottom: 1px solid var(--border); font-weight: bold; display: flex; justify-content: space-between; font-size: 14px;}
+.question-grid { padding: 20px; display: grid; grid-template-columns: repeat(5, 1fr); gap: 10px; overflow-y: auto; flex: 1; align-content: flex-start;}
+.q-box { aspect-ratio: 1; display: flex; align-items: center; justify-content: center; border: 1px solid #444; border-radius: 4px; cursor: pointer; font-size: 14px; color: #ccc;}
+.q-box:hover { border-color: #888; }
+.q-box.done { background: rgba(43, 94, 242, 0.2); border-color: var(--primary); color: white;}
+.q-box.viewing { border-color: var(--primary); color: white; outline: 1px solid var(--primary);}
+
+.sidebar-legend { padding: 20px; border-top: 1px solid var(--border); font-size: 12px; color: #aaa; display: flex; flex-direction: column; gap: 8px;}
+.legend-item { display: flex; align-items: center; gap: 8px; }
+.legend-box { width: 12px; height: 12px; border-radius: 2px; border: 1px solid #444;}
+.legend-box.done { background: var(--primary); border-color: var(--primary);}
+.legend-box.viewing { border-color: var(--primary); }
+
+.watermark { text-align: center; font-size: 12px; color: #666; margin-top: 30px; line-height: 1.5;}
+
+/* Giao diện Đề Cương */
+.guide-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 15px; }
+.guide-q { font-size: 1.1rem; font-weight: bold; margin-top: 0; margin-bottom: 15px; color: #e4e4e7; }
+.guide-opt { padding: 12px 15px; margin-bottom: 8px; background: transparent; border: 1px solid #444; border-radius: 6px; font-size: 0.95rem; color: #aaa; }
+.guide-opt.correct-ans { background: rgba(34, 197, 94, 0.1); border-color: var(--green); color: white; font-weight: bold; }
+
+/* Thêm CSS cho giao diện kết thúc bài thi */
+.tag-wrong { background-color: #7f1d1d; color: #fca5a5; padding: 4px 10px; border-radius: 12px; font-size: 12px; margin-left: 10px; font-weight: bold; }
+.tag-correct { background-color: #14532d; color: #86efac; padding: 4px 10px; border-radius: 12px; font-size: 12px; margin-left: 10px; font-weight: bold; }
+.unanswered-banner { background-color: #450a0a; color: #fca5a5; padding: 12px 15px; border-radius: 6px; margin-bottom: 20px; font-size: 14px; border: 1px solid #7f1d1d; }
+
+.q-box.correct-box { background-color: rgba(34, 197, 94, 0.2); border-color: var(--green); color: white; }
+.q-box.wrong-box { background-color: rgba(239, 68, 68, 0.2); border-color: var(--red); color: white; }
+
+.legend-box.correct-box { background-color: var(--green); border-color: var(--green); }
+.legend-box.wrong-box { background-color: var(--red); border-color: var(--red); }
+.legend-box.not-done { background: transparent; border-color: #444; }
+
+.sidebar-tabs { display: flex; padding: 15px 20px 0 20px; }
+.tab-btn { flex: 1; background: transparent; border: 1px solid #444; color: #999; padding: 6px 0; cursor: pointer; font-size: 12px; transition: 0.3s; margin-left: -1px; }
+.tab-btn:first-child { border-radius: 4px 0 0 4px; margin-left: 0; }
+.tab-btn:last-child { border-radius: 0 4px 4px 0; }
+.tab-btn.active { background: var(--primary); color: white; border-color: var(--primary); z-index: 1; position: relative; }
+.tab-btn:hover:not(.active) { background: #2a2a2a; }
+
+/* History & Test Mode */
+.history-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; cursor: pointer; transition: 0.2s;}
+.history-card:hover { border-color: var(--primary); background: #2a2a2a; }
+.history-info h4 { margin: 0 0 5px 0; color: white; display: flex; align-items: center; gap: 10px; font-weight: normal; font-size: 14px; }
+.history-info h4 a { font-size: 12px; color: #888; text-decoration: underline; cursor: pointer; }
+.history-info h4 a:hover { color: var(--primary); }
+.history-info p { margin: 0 0 5px 0; font-size: 12px; color: #aaa; }
+.history-info .stats { font-size: 13px; color: #ccc; }
+.history-score { width: 40px; height: 40px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-weight: bold; color: white; font-size: 14px;}
+.score-high { background-color: var(--green); }
+.score-medium { background-color: var(--yellow); }
+.score-low { background-color: var(--red); }
+.danger-btn { background: #7f1d1d; color: #fca5a5; border: none; padding: 5px 10px; border-radius: 4px; cursor: pointer; font-size: 12px; }
+.danger-btn:hover { background: #991b1b; }
+.selected-opt { background: rgba(255, 255, 255, 0.1) !important; border-color: #888; }
+.selected-opt .opt-circle { background: #fff; }

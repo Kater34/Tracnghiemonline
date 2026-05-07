@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trắc nghiệm Online HUIT</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 1. MÀN HÌNH TRANG CHỦ -->
+    <div id="view-home" class="view-section active">
+        <header class="top-header">
+            <div></div>
+            <div>Trắc nghiệm Online</div>
+            <div></div>
+        </header>
+        <div class="container" style="max-width: 1050px;">
+            <div style="text-align:center; margin-bottom: 30px;">
+                <h1 style="margin-bottom: 5px;">Chọn môn học</h1>
+                <div style="color: var(--red); font-size: 13px; margin-bottom: 3px;">Lưu ý: WEB PHỤC VỤ CÁ NHÂN KHÔNG DÙNG CHO MỤC ĐÍCH KHÁC.</div>
+                <div style="color: #3b82f6; font-size: 13px;">CRE: Nguyễn Lê Đăng Khoa.</div>
+            </div>
+            
+            <div class="grid">
+                <!-- 1. PP Nghiên cứu khoa học -->
+                <div class="card" onclick="openMenu('ppnckh', 'PP Nghiên cứu khoa học (50 câu)')">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 2H6c-1.206 0-3 .799-3 3v14c0 2.201 1.794 3 3 3h15v-2H6.012C5.55 19.988 5 19.805 5 19s.55-.988 1.012-1H21V4c0-1.103-.897-2-2-2zm-3 8H9V8h7v2zm0-4H9V4h7v2z"/></svg>
+                    </div>
+                    <div class="card-content">
+                        <h3>PP Nghiên cứu KH (120 câu)</h3>
+                        <div class="card-meta"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 16l-9-4.5 1.5-2.25L12 12.5l7.5-3.25L21 11.5 12 16zm0-7.38L5.24 5.24 12 1.86l6.76 3.38L12 8.62z"/></svg> 120 câu</div>
+                        <p>Nhấp để ôn tập</p>
+                    </div>
+                </div>
+                <!-- 2. Triết học -->
+                <div class="card" onclick="openMenu('triethoc', 'Triết học (446 câu)')">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 2H6c-1.206 0-3 .799-3 3v14c0 2.201 1.794 3 3 3h15v-2H6.012C5.55 19.988 5 19.805 5 19s.55-.988 1.012-1H21V4c0-1.103-.897-2-2-2zm-3 8H9V8h7v2zm0-4H9V4h7v2z"/></svg>
+                    </div>
+                    <div class="card-content">
+                        <h3>Triết học (0 câu)</h3>
+                        <div class="card-meta"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 16l-9-4.5 1.5-2.25L12 12.5l7.5-3.25L21 11.5 12 16zm0-7.38L5.24 5.24 12 1.86l6.76 3.38L12 8.62z"/></svg> 0 câu</div>
+                        <p>Nhấp để ôn tập</p>
+                    </div>
+                </div>
+
+                <!-- 3. Tư tưởng Hồ Chí Minh -->
+                <div class="card" onclick="openMenu('hcm', 'Tư tưởng Hồ Chí Minh (365 câu)')">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 2H6c-1.206 0-3 .799-3 3v14c0 2.201 1.794 3 3 3h15v-2H6.012C5.55 19.988 5 19.805 5 19s.55-.988 1.012-1H21V4c0-1.103-.897-2-2-2zm-3 8H9V8h7v2zm0-4H9V4h7v2z"/></svg>
+                    </div>
+                    <div class="card-content">
+                        <h3>Tư tưởng Hồ Chí Minh (0 câu)</h3>
+                        <div class="card-meta"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 16l-9-4.5 1.5-2.25L12 12.5l7.5-3.25L21 11.5 12 16zm0-7.38L5.24 5.24 12 1.86l6.76 3.38L12 8.62z"/></svg> 0 câu</div>
+                        <p>Nhấp để ôn tập</p>
+                    </div>
+                </div>
+                
+                <!-- 4. Lịch Sử Đảng -->
+                <div class="card" onclick="openMenu('lsd', 'Lịch Sử Đảng (420 câu)')">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 2H6c-1.206 0-3 .799-3 3v14c0 2.201 1.794 3 3 3h15v-2H6.012C5.55 19.988 5 19.805 5 19s.55-.988 1.012-1H21V4c0-1.103-.897-2-2-2zm-3 8H9V8h7v2zm0-4H9V4h7v2z"/></svg>
+                    </div>
+                    <div class="card-content">
+                        <h3>Lịch Sử Đảng (0 câu)</h3>
+                        <div class="card-meta"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 16l-9-4.5 1.5-2.25L12 12.5l7.5-3.25L21 11.5 12 16zm0-7.38L5.24 5.24 12 1.86l6.76 3.38L12 8.62z"/></svg> 0 câu</div>
+                        <p>Nhấp để ôn tập</p>
+                    </div>
+                </div>
+
+                <!-- 5. CNXH Khoa Học -->
+                <div class="card" onclick="openMenu('cnxh', 'Chủ Nghĩa Xã Hội Khoa học (352 câu)')">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 2H6c-1.206 0-3 .799-3 3v14c0 2.201 1.794 3 3 3h15v-2H6.012C5.55 19.988 5 19.805 5 19s.55-.988 1.012-1H21V4c0-1.103-.897-2-2-2zm-3 8H9V8h7v2zm0-4H9V4h7v2z"/></svg>
+                    </div>
+                    <div class="card-content">
+                        <h3>Chủ Nghĩa Xã Hội Khoa học (0 câu)</h3>
+                        <div class="card-meta"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 16l-9-4.5 1.5-2.25L12 12.5l7.5-3.25L21 11.5 12 16zm0-7.38L5.24 5.24 12 1.86l6.76 3.38L12 8.62z"/></svg> 0 câu</div>
+                        <p>Nhấp để ôn tập</p>
+                    </div>
+                </div>
+
+                <!-- 6. Kinh tế Chính Trị -->
+                <div class="card" onclick="openMenu('ktct', 'Kinh tế Chính Trị (337 câu)')">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 2H6c-1.206 0-3 .799-3 3v14c0 2.201 1.794 3 3 3h15v-2H6.012C5.55 19.988 5 19.805 5 19s.55-.988 1.012-1H21V4c0-1.103-.897-2-2-2zm-3 8H9V8h7v2zm0-4H9V4h7v2z"/></svg>
+                    </div>
+                    <div class="card-content">
+                        <h3>Kinh tế Chính Trị (0 câu)</h3>
+                        <div class="card-meta"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 16l-9-4.5 1.5-2.25L12 12.5l7.5-3.25L21 11.5 12 16zm0-7.38L5.24 5.24 12 1.86l6.76 3.38L12 8.62z"/></svg> 0 câu</div>
+                        <p>Nhấp để ôn tập</p>
+                    </div>
+                </div>
+
+                <!-- 7. Quản trị học -->
+                <div class="card" onclick="openMenu('qth', 'Quản trị học (535 câu)')">
+                    <div class="card-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M19 2H6c-1.206 0-3 .799-3 3v14c0 2.201 1.794 3 3 3h15v-2H6.012C5.55 19.988 5 19.805 5 19s.55-.988 1.012-1H21V4c0-1.103-.897-2-2-2zm-3 8H9V8h7v2zm0-4H9V4h7v2z"/></svg>
+                    </div>
+                    <div class="card-content">
+                        <h3>Quản trị học (0 câu)</h3>
+                        <div class="card-meta"><svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 16l-9-4.5 1.5-2.25L12 12.5l7.5-3.25L21 11.5 12 16zm0-7.38L5.24 5.24 12 1.86l6.76 3.38L12 8.62z"/></svg> 0 câu</div>
+                        <p>Nhấp để ôn tập</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. MÀN HÌNH MENU CHỌN CHẾ ĐỘ -->
+    <div id="view-menu" class="view-section">
+        <header class="top-header">
+            <button onclick="showView('view-home')">❮ Quay lại</button>
+            <span id="menu-title-header">Tên môn học</span>
+            <button>⏱</button>
+        </header>
+        <div class="container menu-container">
+            <h2 id="menu-title-center" style="text-align:center; margin-bottom: 30px;">Môn: <span style="color:var(--primary);">Môn học</span></h2>
+            
+            <!-- Nút Thi Thử -->
+            <div class="option-card red">
+                <div class="option-header" onclick="startPractice('test')">
+                    <div>
+                        <h3>Thi Thử</h3>
+                        <p>40 câu / 60 phút. Không hiện đáp án khi làm.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Nút Ôn Tập (Có Dropdown) -->
+            <div class="option-card green">
+                <div class="option-header" onclick="togglePracticeOptions()">
+                    <div>
+                        <h3>Ôn Tập</h3>
+                        <p>Hiện đáp án ngay khi chọn.</p>
+                    </div>
+                    <span id="dropdown-icon" class="dropdown-icon">▼</span>
+                </div>
+                <div id="practice-options" class="expanded-options" style="display:none;">
+                    <p>Ôn tập ngẫu nhiên 40 câu:</p>
+                    <button onclick="startPractice(40)">40 Câu ngẫu nhiên</button>
+                    
+                    <p id="chapter-select-label">Hoặc ôn tập theo từng phần (50 câu):</p>
+                    <select id="chapter-select">
+                        <!-- Sẽ tự động sinh bằng Javascript -->
+                    </select>
+                    <button id="practice-btn" class="primary-btn" onclick="startPractice('chunk')">Bắt đầu phần này</button>
+                </div>
+            </div>
+
+            <!-- Nút Xem Đề Cương -->
+            <div class="option-card yellow">
+                <div class="option-header" onclick="openStudyGuide()">
+                    <div>
+                        <h3>Xem đề cương môn học</h3>
+                        <p>Xem danh sách các chương và câu hỏi chi tiết.</p>
+                    </div>
+                    <span style="color: gray;">≡</span>
+                </div>
+            </div>
+
+            <!-- LỊCH SỬ LÀM BÀI TẠI ĐÂY -->
+            <div id="history-section" style="margin-top: 40px; display: none;">
+                <div style="display:flex; justify-content:space-between; align-items:center; border-bottom: 1px solid var(--border); padding-bottom: 10px; margin-bottom: 15px;">
+                    <h3 style="margin:0; font-size:16px;">Lịch sử làm bài</h3>
+                    <button class="danger-btn" onclick="clearHistory()">🗑 Xóa tất cả</button>
+                </div>
+                <div id="history-list">
+                    <!-- Sinh tự động -->
+                </div>
+            </div>
+
+            <!-- Đã xóa watermark -->
+        </div>
+    </div>
+
+    <!-- 3. MÀN HÌNH LÀM BÀI CHIA 2 CỘT -->
+    <div id="view-quiz" class="view-section">
+        <header class="top-header">
+            <button onclick="backFromQuiz()">❮ Quay lại</button>
+            <span id="quiz-header-title">Đang ôn tập</span>
+            <button>⏱</button>
+        </header>
+        
+        <div class="quiz-layout">
+            <!-- Khu vực câu hỏi bên trái -->
+            <div class="quiz-main">
+                <div class="quiz-info-bar">
+                    <span class="timer">THỜI GIAN <span id="timer-display">∞</span></span>
+                    <span class="counter">CÂU <span id="question-counter">1/29</span></span>
+                </div>
+                
+                <div class="question-content">
+                    <div style="display:flex; align-items:center; margin-bottom:15px;">
+                        <h3 id="question-number" style="margin:0;">Câu 1:</h3>
+                        <span id="question-result-tag" style="display:none;"></span>
+                    </div>
+                    <p id="question-text">Nội dung câu hỏi?</p>
+                    <div id="unanswered-banner" class="unanswered-banner" style="display:none;">⚠ Bạn chưa chọn đáp án cho câu này!</div>
+                    <div id="options-container" class="options-grid">
+                        <!-- Nút đáp án sinh ra tự động ở đây -->
+                    </div>
+                </div>
+                
+                <div class="quiz-footer">
+                    <button onclick="prevQuestion()">← Trước</button>
+                    <button class="primary-btn" onclick="finishQuiz()">Kết thúc</button>
+                    <button onclick="nextQuestion()">Sau →</button>
+                </div>
+            </div>
+
+            <!-- Thanh Ma trận câu hỏi bên phải -->
+            <div class="quiz-sidebar">
+                <div class="sidebar-header">
+                    <span>≡ Danh sách câu</span>
+                    <span id="grid-counter" style="color:var(--primary);">0/29</span>
+                </div>
+                <!-- NEW TABS -->
+                <div class="sidebar-tabs" id="sidebar-tabs" style="display:none;">
+                    <button class="tab-btn active" onclick="filterGrid('all')">Tất cả</button>
+                    <button class="tab-btn" onclick="filterGrid('correct')">Đúng</button>
+                    <button class="tab-btn" onclick="filterGrid('wrong')">Sai</button>
+                </div>
+                <div id="question-grid" class="question-grid">
+                    <!-- Ô vuông số câu hỏi sinh ra tự động ở đây -->
+                </div>
+                <div class="sidebar-legend" id="sidebar-legend">
+                    <div class="legend-item"><span class="legend-box not-done"></span> Chưa làm</div>
+                    <div class="legend-item"><span class="legend-box done"></span> Đã làm</div>
+                    <div class="legend-item"><span class="legend-box viewing"></span> Đang xem</div>
+                </div>
+                <div class="sidebar-legend" id="sidebar-legend-finished" style="display:none;">
+                    <div class="legend-item"><span class="legend-box not-done"></span> Chưa làm</div>
+                    <div class="legend-item"><span class="legend-box done"></span> Đã làm</div>
+                    <div class="legend-item"><span class="legend-box viewing"></span> Đang xem</div>
+                    <div class="legend-item"><span class="legend-box correct-box"></span> Đúng</div>
+                    <div class="legend-item"><span class="legend-box wrong-box"></span> Sai</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 4. MÀN HÌNH XEM ĐỀ CƯƠNG -->
+    <div id="view-study-guide" class="view-section">
+        <header class="top-header">
+            <button onclick="showView('view-menu')">❮ Quay lại</button>
+            <span id="guide-header-title">Đề cương</span>
+            <button></button>
+        </header>
+        <div class="container" style="max-width: 800px; padding-bottom: 50px;">
+            <h2 id="guide-main-title" style="text-align: center; margin-bottom: 30px; color: var(--primary);">Đề cương môn học</h2>
+            <div id="guide-content-list">
+                <!-- Danh sách câu hỏi sinh tự động -->
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
