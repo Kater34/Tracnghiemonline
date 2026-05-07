@@ -131,7 +131,8 @@ function startPractice(mode) {
     document.getElementById('sidebar-tabs').style.display = 'none';
     document.getElementById('sidebar-legend').style.display = 'flex';
     document.getElementById('sidebar-legend-finished').style.display = 'none';
-    document.querySelector('.quiz-footer .primary-btn').innerText = 'Kết thúc';
+    document.getElementById('finish-btn-desktop').innerText = 'Xong';
+    document.getElementById('finish-btn-sidebar').innerText = 'Nộp bài thi';
     
     // Reset tab buttons active state
     const tabs = document.querySelectorAll('.tab-btn');
@@ -360,7 +361,8 @@ function finishQuiz() {
     alert(`Kết quả làm bài:\n\nĐIỂM SỐ: ${score} điểm\n\nSố câu đúng: ${correctCount} câu\nSố câu sai / chưa làm: ${wrongCount} câu`);
     
     isQuizFinished = true;
-    document.querySelector('.quiz-footer .primary-btn').innerText = 'Thoát';
+    document.getElementById('finish-btn-desktop').innerText = 'Thoát';
+    document.getElementById('finish-btn-sidebar').innerText = 'Thoát xem lại';
     
     document.getElementById('sidebar-tabs').style.display = 'flex';
     document.getElementById('sidebar-legend').style.display = 'none';
@@ -459,7 +461,8 @@ function reviewHistory(index) {
     currentQIndex = 0;
     
     document.getElementById('quiz-header-title').innerText = currentSubjectTitle;
-    document.querySelector('.quiz-footer .primary-btn').innerText = 'Thoát';
+    document.getElementById('finish-btn-desktop').innerText = 'Thoát';
+    document.getElementById('finish-btn-sidebar').innerText = 'Thoát xem lại';
     document.getElementById('timer-display').innerText = '--:--';
     
     document.getElementById('sidebar-tabs').style.display = 'flex';
@@ -470,6 +473,15 @@ function reviewHistory(index) {
     buildQuestionGrid();
     filterGrid('all');
     loadQuestion();
+}
+
+function toggleMobileSidebar() {
+    const sidebar = document.getElementById('quiz-sidebar');
+    if (sidebar.classList.contains('show-mobile')) {
+        sidebar.classList.remove('show-mobile');
+    } else {
+        sidebar.classList.add('show-mobile');
+    }
 }
 
 // ----------------------------------------

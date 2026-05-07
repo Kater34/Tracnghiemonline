@@ -206,17 +206,19 @@
                 </div>
                 
                 <div class="quiz-footer">
-                    <button onclick="prevQuestion()">← Trước</button>
-                    <button class="primary-btn" onclick="finishQuiz()">Kết thúc</button>
-                    <button onclick="nextQuestion()">Sau →</button>
+                    <button class="icon-btn" onclick="prevQuestion()">←</button>
+                    <button class="ds-btn" onclick="toggleMobileSidebar()">▦ DS Câu</button>
+                    <button class="primary-btn" id="finish-btn-desktop" onclick="finishQuiz()">Xong</button>
+                    <button class="icon-btn" onclick="nextQuestion()">→</button>
                 </div>
             </div>
 
             <!-- Thanh Ma trận câu hỏi bên phải -->
-            <div class="quiz-sidebar">
+            <div class="quiz-sidebar" id="quiz-sidebar">
                 <div class="sidebar-header">
-                    <span>≡ Danh sách câu</span>
-                    <span id="grid-counter" style="color:var(--primary);">0/29</span>
+                    <span>Danh sách câu hỏi</span>
+                    <span id="grid-counter" style="color:var(--primary); font-size: 12px; margin-left: 10px;">0/29</span>
+                    <span class="close-sidebar-btn" onclick="toggleMobileSidebar()">✖</span>
                 </div>
                 <!-- NEW TABS -->
                 <div class="sidebar-tabs" id="sidebar-tabs" style="display:none;">
@@ -238,6 +240,9 @@
                     <div class="legend-item"><span class="legend-box viewing"></span> Đang xem</div>
                     <div class="legend-item"><span class="legend-box correct-box"></span> Đúng</div>
                     <div class="legend-item"><span class="legend-box wrong-box"></span> Sai</div>
+                </div>
+                <div class="sidebar-mobile-footer">
+                    <button class="primary-btn" id="finish-btn-sidebar" onclick="finishQuiz(); toggleMobileSidebar();">Nộp bài thi</button>
                 </div>
             </div>
         </div>
