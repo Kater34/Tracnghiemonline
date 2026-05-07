@@ -7,6 +7,8 @@ body { margin: 0; font-family: sans-serif; background: var(--bg); color: var(--t
 .view-section { display: none; min-height: 100vh; flex-direction: column;}
 .view-section.active { display: flex; }
 
+#view-quiz { height: 100vh; max-height: 100vh; overflow: hidden; }
+
 .top-header { background: var(--primary); padding: 10px 20px; font-weight: bold; display: flex; justify-content: space-between; align-items: center; height: 40px;}
 .top-header button { background: transparent; border: none; color: white; cursor: pointer; font-size: 14px; display: flex; align-items: center; gap: 5px;}
 
