@@ -537,10 +537,10 @@ const questionBank = {
     {
         question: "Một nghiên cứu sinh đang áp dụng phương pháp nghiên cứu hỗn hợp và vận dụng mục tiêu nghiên cứu để xác định lợi ích của việc kết hợp dữ liệu. Lợi ích đó là:",
         options: [
-            "Tạo ra một cái nhìn toàn diện và sâu sắc hơn về vấn đề nghiên cứu",
-            "Đảm bảo tính khách quan của nghiên cứu định tính",
-            "Phân tích chi tiết các yếu tố ảnh hưởng",
-            "Cung cấp số liệu thống kê chính xác hơn"
+            "a. Tạo ra một cái nhìn toàn diện và sâu sắc hơn về vấn đề nghiên cứu",
+            "b. Đảm bảo tính khách quan của nghiên cứu định tính",
+            "c. Phân tích chi tiết các yếu tố ảnh hưởng",
+            "d. Cung cấp số liệu thống kê chính xác hơn"
         ],
         correct: 0
     },
@@ -548,10 +548,10 @@ const questionBank = {
     {
         question: "Một nghiên cứu sinh đang lựa chọn kỹ thuật thu thập thông tin và vận dụng đặc điểm phương pháp định tính để xác định mô tả đúng về phỏng vấn sâu. Mô tả đúng là:",
         options: [
-            "Thường dùng các câu hỏi mở để xem đối tượng được phỏng vấn làm gì, nghĩ gì, cảm thấy gì",
-            "Bắt buộc phải dùng câu hỏi mở",
-            "Có độ tin cậy thấp",
-            "Có chi phí thấp nhất"
+            "a. Thường dùng các câu hỏi mở để xem đối tượng được phỏng vấn làm gì, nghĩ gì, cảm thấy gì",
+            "b. Bắt buộc phải dùng câu hỏi mở",
+            "c. Có độ tin cậy thấp",
+            "d. Có chi phí thấp nhất"
         ],
         correct: 0
     },
@@ -559,10 +559,10 @@ const questionBank = {
     {
         question: "Một nhà nghiên cứu đang phân tích dữ liệu thống kê và vận dụng khái niệm để xác định ý nghĩa của độ lệch chuẩn. Ý nghĩa đó là:",
         options: [
-            "Độ lệch.",
-            "Xu thế.",
-            "Sự phân tán.",
-            "Độ đối xứng."
+            "a. Độ lệch.",
+            "b. Xu thế.",
+            "c. Sự phân tán.",
+            "d. Độ đối xứng."
         ],
         correct: 2
     },
@@ -570,10 +570,10 @@ const questionBank = {
     {
         question: "Một nhà khoa học đang thực hiện thống kê mô tả và vận dụng kiến thức phân tích dữ liệu để xác định các chỉ số cơ bản. Các chỉ số đó là:",
         options: [
-            "Trung bình, phương sai, tần suất",
-            "Hồi quy, tương quan, phân tích nhân tố",
-            "Kiểm định T, kiểm định chi bình phương",
-            "Phân tích phương sai, phân tích tương quan"
+            "a. Trung bình, phương sai, tần suất",
+            "b. Hồi quy, tương quan, phân tích nhân tố",
+            "c. Kiểm định T, kiểm định chi bình phương",
+            "d. Phân tích phương sai, phân tích tương quan"
         ],
         correct: 0
     },
@@ -581,10 +581,10 @@ const questionBank = {
     {
         question: "Một nghiên cứu sinh đang sử dụng biến định tính và vận dụng đặc điểm dữ liệu để xác định mục đích sử dụng. Mục đích đó là:",
         options: [
-            "Đo lường và phân tích các số liệu",
-            "Mô tả các đặc điểm không thể đo lường bằng số",
-            "Thực hiện các thí nghiệm trong môi trường kiểm soát",
-            "Phân tích các dữ liệu thống kê"
+            "a. Đo lường và phân tích các số liệu",
+            "b. Mô tả các đặc điểm không thể đo lường bằng số",
+            "c. Thực hiện các thí nghiệm trong môi trường kiểm soát",
+            "d. Phân tích các dữ liệu thống kê"
         ],
         correct: 1
     },
@@ -592,10 +592,10 @@ const questionBank = {
     {
         question: "Một nhà nghiên cứu đang thiết kế mẫu nghiên cứu và vận dụng nguyên tắc khoa học để đánh giá vai trò của việc chọn mẫu. Vai trò đó là:",
         options: [
-            "Không cần thiết",
-            "Cần được thực hiện một cách ngẫu nhiên",
-            "Quan trọng để đảm bảo tính đại diện và độ tin cậy",
-            "Chỉ cần chọn mẫu dựa trên sở thích cá nhân"
+            "a. Không cần thiết",
+            "b. Cần được thực hiện một cách ngẫu nhiên",
+            "c. Quan trọng để đảm bảo tính đại diện và độ tin cậy",
+            "d. Chỉ cần chọn mẫu dựa trên sở thích cá nhân"
         ],
         correct: 2
     },
@@ -603,10 +603,10 @@ const questionBank = {
     {
         question: "Một nhà nghiên cứu đang xác định khung mẫu và vận dụng khái niệm chọn mẫu để lựa chọn định nghĩa đúng. Định nghĩa đó là:",
         options: [
-            "Là một chủ thể mà đo lường sẽ được làm trên chủ thể đó",
-            "Là tập hợp các cá thể để sử dụng chọn mẫu",
-            "Là một danh sách các đơn vị lấy mẫu",
-            "Là đơn vị của quần thể được chọn vào mẫu"
+            "a. Là một chủ thể mà đo lường sẽ được làm trên chủ thể đó",
+            "b. Là tập hợp các cá thể để sử dụng chọn mẫu",
+            "c. Là một danh sách các đơn vị lấy mẫu",
+            "d. Là đơn vị của quần thể được chọn vào mẫu"
         ],
         correct: 2
     },
@@ -614,10 +614,10 @@ const questionBank = {
     {
         question: "Một nghiên cứu sinh đang xây dựng mô hình thực nghiệm và vận dụng khái niệm biến độc lập để xác định vai trò của biến này. Vai trò đó là:",
         options: [
-            "Biến mà bạn đo lường để đánh giá kết quả",
-            "Biến mà bạn kiểm soát và thay đổi để xem ảnh hưởng",
-            "Biến không thay đổi trong suốt nghiên cứu",
-            "Biến không được đưa vào mô hình nghiên cứu"
+            "a. Biến mà bạn đo lường để đánh giá kết quả",
+            "b. Biến mà bạn kiểm soát và thay đổi để xem ảnh hưởng",
+            "c. Biến không thay đổi trong suốt nghiên cứu",
+            "d. Biến không được đưa vào mô hình nghiên cứu"
         ],
         correct: 1
     },
@@ -625,10 +625,10 @@ const questionBank = {
     {
         question: "Một nghiên cứu sinh đang xác định kỹ thuật thu thập dữ liệu cho nghiên cứu định tính và vận dụng đặc điểm phương pháp để lựa chọn phương án phù hợp. Phương án đó là:",
         options: [
-            "Quan sát",
-            "Phỏng vấn, có cấu trúc và không cấu trúc",
-            "Thí nghiệm",
-            "Quan sát, Phỏng vấn, Thí nghiệm"
+            "a. Quan sát",
+            "b. Phỏng vấn, có cấu trúc và không cấu trúc",
+            "c. Thí nghiệm",
+            "d. Quan sát, Phỏng vấn, Thí nghiệm"
         ],
         correct: 3
     },
@@ -636,10 +636,10 @@ const questionBank = {
     {
         question: "Một nhà nghiên cứu đang phân tích hồi quy tuyến tính và vận dụng ý nghĩa hệ số hồi quy (β) để xác định nội dung phản ánh. Nội dung đó là:",
         options: [
-            "Mối quan hệ giữa biến độc lập và biến phụ thuộc",
-            "Độ mạnh của mối quan hệ giữa hai biến",
-            "Giá trị dự đoán của biến phụ thuộc",
-            "Độ tin cậy của mô hình hồi quy"
+            "a. Mối quan hệ giữa biến độc lập và biến phụ thuộc",
+            "b. Độ mạnh của mối quan hệ giữa hai biến",
+            "c. Giá trị dự đoán của biến phụ thuộc",
+            "d. Độ tin cậy của mô hình hồi quy"
         ],
         correct: 0
     },
@@ -647,10 +647,10 @@ const questionBank = {
     {
         question: "Vận dụng kiến thức về phương pháp phân tích dữ liệu trong nghiên cứu khoa học thì trong nghiên cứu quy mô lớn cần xử lý nhanh dữ liệu khảo sát, ưu điểm quan trọng nhất của câu hỏi đóng là:",
         options: [
-            "Dễ xử lý vì đã được mã hóa trước",
-            "Tốn thời gian phân tích",
-            "Câu trả lời có thể không phù hợp với ý định người trả lời và thông tin quan trọng có thể bị bỏ sót",
-            "Thông tin được cung cấp có giá trị cao"
+            "a. Dễ xử lý vì đã được mã hóa trước",
+            "b. Tốn thời gian phân tích",
+            "c. Câu trả lời có thể không phù hợp với ý định người trả lời và thông tin quan trọng có thể bị bỏ sót",
+            "d. Thông tin được cung cấp có giá trị cao"
         ],
         correct: 0
     },
@@ -658,10 +658,10 @@ const questionBank = {
     {
         question: "Vận dụng kiến thức về phương pháp phân tích dữ liệu trong nghiên cứu khoa học thì khi mỗi cá thể trong quần thể có cơ hội được chọn như nhau nhằm đảm bảo tính đại diện, phương pháp chọn mẫu được sử dụng là:",
         options: [
-            "Chọn mẫu trong đó các cá thể trong quần thể có cùng cơ hội",
-            "Sử dụng phán đoán của nhà nghiên cứu về khả năng của người trả lời đóng góp cho nghiên cứu.",
-            "Lấy mẫu từ một người, sau đó nhờ người đó giới thiệu để tiếp tục khảo sát, phỏng vấn.",
-            "Dựa trên sự thuận tiện trong việc tiếp cận mẫu trên tổng thể."
+            "a. Chọn mẫu trong đó các cá thể trong quần thể có cùng cơ hội",
+            "b. Sử dụng phán đoán của nhà nghiên cứu về khả năng của người trả lời đóng góp cho nghiên cứu.",
+            "c. Lấy mẫu từ một người, sau đó nhờ người đó giới thiệu để tiếp tục khảo sát, phỏng vấn.",
+            "d. Dựa trên sự thuận tiện trong việc tiếp cận mẫu trên tổng thể."
         ],
         correct: 0
     },
@@ -669,10 +669,10 @@ const questionBank = {
     {
         question: "Vận dụng kiến thức về phương pháp phân tích dữ liệu trong nghiên cứu khoa học thì trong trong nghiên cứu định lượng, nhằm suy rộng kết quả cho tổng thể, nguyên tắc chọn mẫu phù hợp nhất là:",
         options: [
-            "Dựa trên sự tự nguyện",
-            "Dựa trên ngẫu nhiên và đại diện",
-            "Dựa trên mức độ ảnh hưởng của biến độc lập",
-            "Dựa trên tính đa dạng và phong phú"
+            "a. Dựa trên sự tự nguyện",
+            "b. Dựa trên ngẫu nhiên và đại diện",
+            "c. Dựa trên mức độ ảnh hưởng của biến độc lập",
+            "d. Dựa trên tính đa dạng và phong phú"
         ],
         correct: 1
     },
@@ -680,10 +680,10 @@ const questionBank = {
     {
         question: "Khi vận dụng các kỹ thuật phân tích dữ liệu định lượng để giải quyết bài toán nghiên cứu, phân tích dữ liệu định lượng được xác định là:",
         options: [
-            "Phân tích các thông tin dựa trên các số liệu cụ thể",
-            "Là quá trình tổng hợp, đối chiếu, suy luận để có thể nhận diện được các thông tin bên trong",
-            "Phân tích thông tin nhằm mục đích nghiên cứu khám phá, tìm ra thông tin mới hoặc tri thức mới",
-            "Là quá trình lượng hóa mối quan hệ giữa các nhân tố thông qua các công cụ phân tích với các dữ liệu được đặc trưng bởi các con số."
+            "a. Phân tích các thông tin dựa trên các số liệu cụ thể",
+            "b. Là quá trình tổng hợp, đối chiếu, suy luận để có thể nhận diện được các thông tin bên trong",
+            "c. Phân tích thông tin nhằm mục đích nghiên cứu khám phá, tìm ra thông tin mới hoặc tri thức mới",
+            "d. Là quá trình lượng hóa mối quan hệ giữa các nhân tố thông qua các công cụ phân tích với các dữ liệu được đặc trưng bởi các con số."
         ],
         correct: 3
     },
@@ -691,10 +691,10 @@ const questionBank = {
     {
         question: "Khi thiết kế và vận dụng nghiên cứu thực nghiệm nhằm kiểm định giả thuyết nhân quả, yếu tố cốt lõi cần xác định là:",
         options: [
-            "Sự kiểm soát biến",
-            "Sự phân tích nội dung",
-            "Sự mô tả các đặc điểm của mẫu nghiên cứu",
-            "Sự phân tích tần suất"
+            "a. Sự kiểm soát biến",
+            "b. Sự phân tích nội dung",
+            "c. Sự mô tả các đặc điểm của mẫu nghiên cứu",
+            "d. Sự phân tích tần suất"
         ],
         correct: 0
     },
@@ -702,10 +702,10 @@ const questionBank = {
     {
         question: "Khi thực hiện quy trình xử lý dữ liệu khảo sát trước phân tích, nhà nghiên cứu cần xác định bước quan trọng nhất là:",
         options: [
-            "Kết quả phân tích dữ liệu định tính được trình bày dưới dạng các mô hình toán học",
-            "Dữ liệu thu thập từ khảo sát qua bảng hỏi (questionaire survey) là dữ liệu định tính",
-            "Dữ liệu thứ cấp có thể là những dữ liệu chưa qua xử lý (dữ liệu thô) được thu thập bởi nhà nghiên cứu từ nguồn đầu tiên.",
-            "Việc kiểm tra dữ liệu thô (phần trả lời ở tất cả các phiếu khảo sát) là một công đoạn quan trọng trước khi tiến hành nhập dữ liệu để thực hiện các bước phân tích tiếp theo."
+            "a. Kết quả phân tích dữ liệu định tính được trình bày dưới dạng các mô hình toán học",
+            "b. Dữ liệu thu thập từ khảo sát qua bảng hỏi (questionaire survey) là dữ liệu định tính",
+            "c. Dữ liệu thứ cấp có thể là những dữ liệu chưa qua xử lý (dữ liệu thô) được thu thập bởi nhà nghiên cứu từ nguồn đầu tiên.",
+            "d. Việc kiểm tra dữ liệu thô (phần trả lời ở tất cả các phiếu khảo sát) là một công đoạn quan trọng trước khi tiến hành nhập dữ liệu để thực hiện các bước phân tích tiếp theo."
         ],
         correct: 3
     },
@@ -713,10 +713,10 @@ const questionBank = {
     {
         question: "Khi vận dụng phương pháp nghiên cứu định tính để phân tích dữ liệu phỏng vấn sâu về hành vi người tiêu dùng, nhà nghiên cứu cần lựa chọn nội dung phân tích phù hợp nhất là:",
         options: [
-            "Phân tích hồi quy",
-            "Phân tích tương quan và so sánh nhóm.",
-            "Mô tả, phân loại hiện tượng và kết nối dữ liệu",
-            "Phân tích độ tin cậy của thang đo"
+            "a. Phân tích hồi quy",
+            "b. Phân tích tương quan và so sánh nhóm.",
+            "c. Mô tả, phân loại hiện tượng và kết nối dữ liệu",
+            "d. Phân tích độ tin cậy của thang đo"
         ],
         correct: 2
     },
@@ -724,10 +724,10 @@ const questionBank = {
     {
         question: "Khi thiết kế và vận dụng nghiên cứu thực nghiệm có chia nhóm ngẫu nhiên để kiểm định hiệu quả can thiệp, mục tiêu chính của việc phân nhóm này là xác định:",
         options: [
-            "Giảm sai số hệ thống",
-            "Tăng tính đại diện của mẫu",
-            "Giảm sai số nhớ lại",
-            "Trung hòa yếu tố nhiễu"
+            "a. Giảm sai số hệ thống",
+            "b. Tăng tính đại diện của mẫu",
+            "c. Giảm sai số nhớ lại",
+            "d. Trung hòa yếu tố nhiễu"
         ],
         correct: 3
     },
@@ -735,10 +735,10 @@ const questionBank = {
     {
         question: "Khi đánh giá và vận dụng tiêu chí chất lượng trong nghiên cứu định tính, nhà nghiên cứu cần xác định giá trị và độ tin cậy dựa trên:",
         options: [
-            "Tính trong sạch của phương pháp được sử dụng",
-            "Giá trị lý thuyết và tính mô tả, diễn dịch của kết quả",
-            "Báo cáo trong một tạp chí khoa học",
-            "Báo cáo trong một hội nghị khoa học"
+            "a. Tính trong sạch của phương pháp được sử dụng",
+            "b. Giá trị lý thuyết và tính mô tả, diễn dịch của kết quả",
+            "c. Báo cáo trong một tạp chí khoa học",
+            "d. Báo cáo trong một hội nghị khoa học"
         ],
         correct: 1
     },
@@ -746,10 +746,10 @@ const questionBank = {
     {
         question: "Khi xây dựng và thực hiện một thiết kế thí nghiệm ngẫu nhiên để kiểm định quan hệ nhân quả, nghiên cứu này giúp nhà nghiên cứu xác định:",
         options: [
-            "Xác định các yếu tố có thể xảy ra ngẫu nhiên",
-            "Tránh các yếu tố bên ngoài ảnh hưởng đến kết quả nghiên cứu",
-            "Đảm bảo rằng mọi yếu tố được kiểm soát và kết quả có thể được xác nhận",
-            "Xác định các biến không liên quan"
+            "a. Xác định các yếu tố có thể xảy ra ngẫu nhiên",
+            "b. Tránh các yếu tố bên ngoài ảnh hưởng đến kết quả nghiên cứu",
+            "c. Đảm bảo rằng mọi yếu tố được kiểm soát và kết quả có thể được xác nhận",
+            "d. Xác định các biến không liên quan"
         ],
         correct: 2
     }
@@ -977,7 +977,171 @@ const questionBank = {
     }
       ],
       "Tổng hợp trắc nghiêm trong sách:": [
-        
+        //Câu 1: 
+    {
+        question: "Thời gian nghiên cứu dự báo cấp 1 được xác định dự báo cho khoảng thời gian nào?",
+        options: [
+            "a. 40-50 năm",
+            "b. 15-20 năm",
+            "c. 30-40 năm",
+            "d. 50-65 năm"
+        ],
+        correct: 1
+    },
+//Câu 2: 
+    {
+        question: "Nghiên cứu về Lực đẩy Archimede nhằm tìm ra quy luật sức nâng của nước thuộc loại hình nghiên cứu khoa học nào?",
+        options: [
+            "a. Nghiên cứu cơ bản",
+            "b. Nghiên cứu ứng dụng",
+            "c. Nghiên cứu triển khai",
+            "d. Nghiên cứu dự báo"
+        ],
+        correct: 0
+    },
+//Câu 3: 
+    {
+        question: "Hãy sắp xếp theo thứ tự tăng dần các mức độ nghiên cứu tương ứng với giá trị tri thức thu được:",
+        options: [
+            "a. Mô tả, Giải thích, Phát hiện",
+            "b. Giải thích, Mô tả, Phát hiện",
+            "c. Phát hiện, Giải thích, Mô tả",
+            "d. Phát hiện, Mô tả, Giải thích"
+        ],
+        correct: 0
+    },
+//Câu 4: 
+    {
+        question: "Việc khoa học ngày nay được phân chia ra trên 2000 bộ môn khác nhau là minh chứng rõ rệt cho quy luật nào?",
+        options: [
+            "a. Quy luật phát triển phân hóa của khoa học",
+            "b. Quy luật phát triển có gia tốc tất cả các lĩnh vực khoa học",
+            "c. Quy luật tích hợp các lĩnh vực khoa học",
+            "d. Quy luật ứng dụng nhanh các thành tựu khoa học"
+        ],
+        correct: 0
+    },
+//Câu 5: 
+    {
+        question: "Giai đoạn nào trong lịch sử phát triển khoa học chứng kiến sự phân hóa mạnh mẽ giữa các ngành và sự xuất hiện của các ngành trung gian như lý - sinh, hóa - sinh?",
+        options: [
+            "a. Thế kỉ XV – XVII",
+            "b. Thế kỉ XVIII - XIX",
+            "c. Thế kỉ XIX – XX",
+            "d. Thế kỉ XX – XXI"
+        ],
+        correct: 2
+    },
+//Câu 6: 
+    {
+        question: "Nghiên cứu nhằm tìm ra các triển vọng và xu hướng mới của sự phát triển khoa học trong tương lai (ví dụ xu hướng tiêu dùng trong 10 năm tới) thuộc loại hình nào?",
+        options: [
+            "a. Nghiên cứu dự báo",
+            "b. Nghiên cứu ứng dụng",
+            "c. Nghiên cứu cơ bản",
+            "d. Nghiên cứu triển khai"
+        ],
+        correct: 0
+    },
+//Câu 7: 
+    {
+        question: "Yếu tố nào sau đây không đóng vai trò quyết định trực tiếp đến giá trị của một kết quả nghiên cứu khoa học?",
+        options: [
+            "a. Người nghiên cứu",
+            "b. Tính thông tin",
+            "c. Tính ứng dụng",
+            "d. Sự đáp ứng nhu cầu của cuộc sống"
+        ],
+        correct: 0
+    },
+//Câu 8: 
+    {
+        question: "Phát biểu nào sau đây thuộc nội dung cơ bản của một nghiên cứu khoa học?",
+        options: [
+            "a. Phát hiện quy luật vận động của thế giới khách quan (tự nhiên, xã hội và con người)",
+            "b. Là quá trình tìm kiếm và xây dựng đội ngũ cán bộ nghiên cứu",
+            "c. Tìm kiếm nguồn kinh phí đáp ứng yêu cầu thực hiện đề tài",
+            "d. Xây dựng cơ sở lý thuyết khoa học mới, bác bỏ các lý thuyết cũ không còn phù hợp"
+        ],
+        correct: 0
+    },
+//Câu 9: 
+    {
+        question: "Đặc điểm nào dưới đây KHÔNG thuộc về khái niệm công nghệ cao trong nền sản xuất hiện đại?",
+        options: [
+            "a. Đội ngũ người lao động được đào tạo chất lượng cao",
+            "b. Hệ thống thiết bị được thiết kế tự động hoàn toàn, máy móc có cấu trúc phức tạp nhưng vận hành đơn giản",
+            "c. Năng suất lao động rất cao, sản phẩm hàng hoá có chất lượng tốt",
+            "d. Bí quyết của quy trình kỹ thuật sản xuất hết sức tinh vi"
+        ],
+        correct: 0
+    },
+//Câu 10: 
+    {
+        question: "Vì sao khoa học ở mức độ mô tả thường chỉ dừng lại ở nhận thức thực tiễn và kinh nghiệm?",
+        options: [
+            "a. Mô tả chưa đạt tới trình độ thiết lập được các mối quan hệ có tính qui luật, bản chất bên trong của đối tượng",
+            "b. Mô tả chỉ cho ta hình ảnh về hiện thực",
+            "c. Mô tả chỉ có tính định tính",
+            "d. Mô tả chưa giải thích được nguyên nhân phát sinh hiện tượng"
+        ],
+        correct: 0
+    },
+//Câu 11: 
+    {
+        question: "Mục đích cốt lõi nhất của nghiên cứu khoa học là gì?",
+        options: [
+            "a. Tìm tòi, khám phá bản chất và các quy luật vận động của thế giới nhằm đáp ứng nhu cầu cuộc sống",
+            "b. Sáng tạo ra các sản phẩm vật chất, tinh thần đáp ứng nhu cầu con người",
+            "c. Cải tạo thế giới",
+            "d. Sáng tạo ra hệ thống tri thức trong các bài viết, báo cáo của nhà khoa học"
+        ],
+        correct: 0
+    },
+//Câu 12: 
+    {
+        question: "Tri thức mô tả trong nghiên cứu khoa học được xác định là:",
+        options: [
+            "a. Những tri thức thu nhận được qua quan sát, điều tra và được trình bày bằng hệ thống các kí hiệu có tính trực quan",
+            "b. Những tri thức mà nhà khoa học dùng để mô tả lại sự vật hiện tượng",
+            "c. Những tri thức được ghi nhận trong các báo cáo khoa học",
+            "d. Những hệ thống ngôn ngữ (âm thanh, chữ viết, kí tự) để biểu đạt lại sự vật hiện tượng"
+        ],
+        correct: 0
+    },
+//Câu 13: 
+    {
+        question: "Việc sản phẩm hàng hóa hiện nay thường xuyên được cải tiến mẫu mã và nâng cao chất lượng là minh chứng cho quy luật nào?",
+        options: [
+            "a. Quy luật ứng dụng nhanh các thành tựu khoa học",
+            "b. Quy luật phát triển có gia tốc tất cả các lĩnh vực khoa học",
+            "c. Quy luật phát triển phân hóa của khoa học",
+            "d. Quy luật tích hợp các lĩnh vực khoa học"
+        ],
+        correct: 0
+    },
+//Câu 14: 
+    {
+        question: "Nội dung nào sau đây KHÔNG phải là bản chất nội tại của hoạt động nghiên cứu khoa học?",
+        options: [
+            "a. Là quá trình tìm kiếm và xây dựng đội ngũ cán bộ nghiên cứu đáp ứng yêu cầu từng giai đoạn",
+            "b. Là quá trình khảo sát, thẩm tra một vấn đề khoa học",
+            "c. Tìm kiếm, khám phá những thuộc tính bản chất của sự vật hiện tượng",
+            "d. Vận dụng các qui luật đã khám phá được để sáng tạo các giải pháp cải tạo thế giới"
+        ],
+        correct: 0
+    },
+//Câu 15: 
+    {
+        question: "Hoạt động nghiên cứu khoa học đầy đủ theo mô hình hệ thống bao gồm các nhân tố nào?",
+        options: [
+            "a. Chủ thể nghiên cứu; Mục đích nghiên cứu; Phương pháp nghiên cứu; Sản phẩm nghiên cứu; Giá trị khoa học",
+            "b. Chủ thể nghiên cứu; Phương pháp nghiên cứu; Phạm vi nghiên cứu; Người nghiên cứu; Thời gian",
+            "c. Đối tượng nghiên cứu; Phạm vi nghiên cứu; Phương pháp nghiên cứu; Kết quả nghiên cứu",
+            "d. Mục tiên nghiên cứu; Mục đích nghiên cứu; Đối tượng nghiên cứu; Thời gian; Phạm vi"
+        ],
+        correct: 0
+    }    
       ],
 }
 }

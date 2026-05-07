@@ -533,6 +533,42 @@ function updateViewCounters() {
 }
 updateViewCounters();
 
+// ----------------------------------------
+// LẮNG NGHE SỰ KIỆN BÀN PHÍM
+// ----------------------------------------
+document.addEventListener('keydown', function(event) {
+    // Chỉ xử lý phím tắt khi đang ở màn hình thi/ôn tập
+    const viewQuiz = document.getElementById('view-quiz');
+    if (!viewQuiz || !viewQuiz.classList.contains('active')) return;
+
+    // Lùi câu (Mũi tên trái)
+    if (event.key === 'ArrowLeft') {
+        prevQuestion();
+        return;
+    }
+    
+    // Tiến câu (Mũi tên phải)
+    if (event.key === 'ArrowRight') {
+        nextQuestion();
+        return;
+    }
+    
+    // Kết thúc / Thoát (Enter)
+    if (event.key === 'Enter') {
+        finishQuiz();
+        return;
+    }
+
+    // Chọn đáp án 1, 2, 3, 4
+    if (event.key >= '1' && event.key <= '4') {
+        const idx = parseInt(event.key) - 1;
+        const options = document.querySelectorAll('.opt-btn');
+        if (options && options.length > idx) {
+            options[idx].click();
+        }
+    }
+});
+
 function renderStudyGuideList(qArr, container, startIndex) {
     let currentIndex = startIndex;
     qArr.forEach((qData) => {
