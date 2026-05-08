@@ -1,4 +1,4 @@
-const CACHE_NAME = 'tracnghiem-cache-v1';
+const CACHE_NAME = 'tracnghiem-cache-v7';
 
 // Danh sách các file cần tải ngầm và lưu trữ offline
 const urlsToCache = [

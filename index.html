@@ -14,12 +14,11 @@
 </head>
 <body>
 
-    <!-- 1. MÀN HÌNH TRANG CHỦ -->
     <div id="view-home" class="view-section active">
         <header class="top-header">
             <div></div>
             <div>Trắc nghiệm Online</div>
-            <div></div>
+            <button onclick="openSettings()" style="background:transparent; border:none; font-size:18px; cursor:pointer;">⚙️</button>
         </header>
         <div class="container" style="max-width: 1050px;">
             <div style="text-align:center; margin-bottom: 30px;">
@@ -27,6 +26,7 @@
                 <div style="color: var(--red); font-size: 13px; margin-bottom: 3px;">Lưu ý: WEB PHỤC VỤ CÁ NHÂN KHÔNG DÙNG CHO MỤC ĐÍCH KHÁC.</div>
                 <div style="color: #3b82f6; font-size: 13px;">CRE: Nguyễn Lê Đăng Khoa.</div>
                 <div style="color: var(--red); font-size: 14px; margin-bottom: 3px">Tính năng: 1,2,3,4 tương ứng a,b,c,d || -> qua câu tiếp theo || <- quay về câu trước đó.</div>
+                <div style="color: var(--red); font-size: 14px; margin-bottom: 3px">Setting: Chuyển đổi giao diện trắng/đen ||Cài đặt ứng dụng về máy.</div>
             </div>
             
             <div class="grid">
@@ -119,7 +119,7 @@
         <!-- THỐNG KÊ TRUY CẬP (TRANG CHỦ) -->
         <div style="text-align: center; font-size: 13px; color: #888; padding: 20px 0; margin-top: auto; border-top: 1px solid var(--border); display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
             <span>🟢 Đang Online: <span class="online-users-count" style="font-weight:bold; color: #00e676;">0</span></span>
-            <span>👁 Tổng truy cập: <span class="total-views-count" style="font-weight:bold; color: white;">0</span></span>
+            <span>👁 Tổng truy cập: <span class="total-views-count" style="font-weight:bold; color: var(--text);">0</span></span>
         </div>
     </div>
 
@@ -128,7 +128,7 @@
         <header class="top-header">
             <button onclick="showView('view-home')">❮ Quay lại</button>
             <span id="menu-title-header">Tên môn học</span>
-            <button>⏱</button>
+            <button onclick="openSettings()" style="background:transparent; border:none; font-size:18px; cursor:pointer;">⚙️</button>
         </header>
         <div class="container menu-container">
             <h2 id="menu-title-center" style="text-align:center; margin-bottom: 30px;">Môn: <span style="color:var(--primary);">Môn học</span></h2>
@@ -178,7 +178,7 @@
             <!-- THỐNG KÊ TRUY CẬP (TRANG MENU) -->
             <div style="text-align: center; font-size: 13px; color: #888; padding: 20px 0; margin-top: 20px; border-top: 1px solid var(--border); display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
                 <span>🟢 Đang Online: <span class="online-users-count" style="font-weight:bold; color: #00e676;">0</span></span>
-                <span>👁 Tổng truy cập: <span class="total-views-count" style="font-weight:bold; color: white;">0</span></span>
+                <span>👁 Tổng truy cập: <span class="total-views-count" style="font-weight:bold; color: var(--text);">0</span></span>
             </div>
 
             <!-- LỊCH SỬ LÀM BÀI TẠI ĐÂY -->
@@ -201,7 +201,7 @@
         <header class="top-header">
             <button onclick="backFromQuiz()">❮ Quay lại</button>
             <span id="quiz-header-title">Đang ôn tập</span>
-            <button>⏱</button>
+            <button onclick="openSettings()" style="background:transparent; border:none; font-size:18px; cursor:pointer;">⚙️</button>
         </header>
         
         <div class="quiz-layout">
@@ -272,7 +272,7 @@
         <header class="top-header">
             <button onclick="showView('view-menu')">❮ Quay lại</button>
             <span id="guide-header-title">Đề cương</span>
-            <button></button>
+            <button onclick="openSettings()" style="background:transparent; border:none; font-size:18px; cursor:pointer;">⚙️</button>
         </header>
         <div class="container" style="max-width: 800px; padding-bottom: 50px;">
             <h2 id="guide-main-title" style="text-align: center; margin-bottom: 30px; color: var(--primary);">Đề cương môn học</h2>
@@ -291,6 +291,36 @@
     <script src="data_ktct.js"></script>
     <script src="data_qth.js"></script>
     
+    <!-- SETTINGS MODAL -->
+    <div id="settings-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h3 style="margin-top:0; border-bottom: 1px solid var(--border); padding-bottom: 10px; color: var(--text);">Cài đặt</h3>
+            
+            <div style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
+                <span style="font-size: 16px; color: var(--text);">Giao diện:</span>
+                <div class="theme-toggle-container">
+                    <span style="font-size: 12px; margin-right: 8px; color: var(--text);">Dark</span>
+                    <label class="switch">
+                        <input type="checkbox" id="theme-toggle">
+                        <span class="slider round"></span>
+                    </label>
+                    <span style="font-size: 12px; margin-left: 8px; color: var(--text);">Light</span>
+                </div>
+            </div>
+
+            <div id="install-app-container" style="display: flex; justify-content: space-between; align-items: center; margin: 20px 0;">
+                <span style="font-size: 16px; color: var(--text);">Cài đặt ứng dụng:</span>
+                <button class="primary-btn" id="install-app-btn" style="padding: 8px 16px; margin: 0; display:flex; align-items:center; gap:5px;">
+                    📥 Cài đặt
+                </button>
+            </div>
+
+            <div style="text-align: right; margin-top: 20px;">
+                <button class="primary-btn" onclick="closeSettings()" style="padding: 8px 20px; margin: 0; background-color: var(--border); color: var(--text);">Đóng</button>
+            </div>
+        </div>
+    </div>
+
     <!-- FIREBASE -->
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>

@@ -586,3 +586,68 @@ function renderStudyGuideList(qArr, container, startIndex) {
     });
     return currentIndex;
 }
+
+// ----------------------------------------
+// MODAL CÀI ĐẶT VÀ GIAO DIỆN (DARK/LIGHT)
+// ----------------------------------------
+function openSettings() {
+    document.getElementById('settings-modal').classList.add('active');
+}
+function closeSettings() {
+    document.getElementById('settings-modal').classList.remove('active');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+        // Tải theme đã lưu (Mặc định là dark)
+        const savedTheme = localStorage.getItem('theme') || 'dark';
+        if (savedTheme === 'light') {
+            document.body.setAttribute('data-theme', 'light');
+            themeToggle.checked = true;
+        }
+
+        // Bật / tắt theme
+        themeToggle.addEventListener('change', function() {
+            if (this.checked) {
+                document.body.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.body.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'dark');
+            }
+        });
+    }
+});
+
+// ----------------------------------------
+// CÀI ĐẶT PWA (TẢI ỨNG DỤNG)
+// ----------------------------------------
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+    // Ngăn chặn trình duyệt tự động hiện thông báo
+    e.preventDefault();
+    // Lưu lại sự kiện để gọi sau khi người dùng bấm nút
+    deferredPrompt = e;
+    
+    // Hiển thị nút "Cài đặt ứng dụng" trong modal Cài đặt (Đã đổi thành luôn hiện)
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const installBtn = document.getElementById('install-app-btn');
+    if (installBtn) {
+        installBtn.addEventListener('click', async () => {
+            if (deferredPrompt) {
+                // Hiển thị khung cài đặt thực sự của trình duyệt
+                deferredPrompt.prompt();
+                // Đợi người dùng phản hồi
+                const { outcome } = await deferredPrompt.userChoice;
+                // Xóa sự kiện sau khi đã dùng
+                deferredPrompt = null;
+            } else {
+                alert("Trang web đã được cài đặt hoặc trình duyệt của bạn không hỗ trợ tính năng này!");
+            }
+        });
+    }
+});
