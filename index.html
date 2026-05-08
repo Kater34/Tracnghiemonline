@@ -111,8 +111,9 @@
         </div>
         
         <!-- THỐNG KÊ TRUY CẬP (TRANG CHỦ) -->
-        <div style="text-align: center; font-size: 13px; color: #888; padding: 20px 0; margin-top: auto; border-top: 1px solid var(--border);">
-            👁 Tổng lượt truy cập: <span id="total-views" style="font-weight:bold; color: white;">0</span>
+        <div style="text-align: center; font-size: 13px; color: #888; padding: 20px 0; margin-top: auto; border-top: 1px solid var(--border); display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+            <span>🟢 Đang Online: <span class="online-users-count" style="font-weight:bold; color: #00e676;">0</span></span>
+            <span>👁 Tổng truy cập: <span class="total-views-count" style="font-weight:bold; color: white;">0</span></span>
         </div>
     </div>
 
@@ -166,6 +167,12 @@
                     </div>
                     <span style="color: gray;">≡</span>
                 </div>
+            </div>
+            
+            <!-- THỐNG KÊ TRUY CẬP (TRANG MENU) -->
+            <div style="text-align: center; font-size: 13px; color: #888; padding: 20px 0; margin-top: 20px; border-top: 1px solid var(--border); display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <span>🟢 Đang Online: <span class="online-users-count" style="font-weight:bold; color: #00e676;">0</span></span>
+                <span>👁 Tổng truy cập: <span class="total-views-count" style="font-weight:bold; color: white;">0</span></span>
             </div>
 
             <!-- LỊCH SỬ LÀM BÀI TẠI ĐÂY -->
@@ -277,6 +284,54 @@
     <script src="data_cnxh.js"></script>
     <script src="data_ktct.js"></script>
     <script src="data_qth.js"></script>
+    
+    <!-- FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script>
+      const firebaseConfig = {
+        apiKey: "AIzaSyB08HEx2Em7H5CH7lvQYsVbX_YxRWWXprU",
+        authDomain: "tracnghiemonline-da410.firebaseapp.com",
+        projectId: "tracnghiemonline-da410",
+        storageBucket: "tracnghiemonline-da410.firebasestorage.app",
+        messagingSenderId: "89439165378",
+        appId: "1:89439165378:web:08b55e3afb450bf86f945b",
+        databaseURL: "https://tracnghiemonline-da410-default-rtdb.firebaseio.com/"
+      };
+      firebase.initializeApp(firebaseConfig);
+      const db = firebase.database();
+      
+      // 1. NGƯỜI ĐANG ONLINE (Online Users)
+      const connectedRef = db.ref('.info/connected');
+      
+      connectedRef.on('value', (snap) => {
+          if (snap.val() === true) {
+              const myConnectionRef = db.ref('stats/connections').push();
+              myConnectionRef.set(true);
+              myConnectionRef.onDisconnect().remove();
+          }
+      });
+      
+      db.ref('stats/connections').on('value', (snapshot) => {
+          const onlineCount = snapshot.numChildren() || 0;
+          document.querySelectorAll('.online-users-count').forEach(el => el.innerText = onlineCount.toLocaleString('vi-VN'));
+      });
+
+      // 2. TỔNG LƯỢNG TRUY CẬP (Total Views)
+      const viewsRef = db.ref('stats/total_views');
+      
+      // Tăng lượng truy cập mỗi khi tải trang
+      viewsRef.transaction((currentViews) => {
+          return (currentViews || 0) + 1;
+      });
+      
+      // Lắng nghe và hiển thị
+      viewsRef.on('value', (snapshot) => {
+          const total = snapshot.val() || 0;
+          document.querySelectorAll('.total-views-count').forEach(el => el.innerText = total.toLocaleString('vi-VN'));
+      });
+    </script>
+    
     <script src="app.js"></script>
 </body>
 </html>
