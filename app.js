@@ -263,7 +263,8 @@ function loadQuestion() {
         bannerEl.style.display = 'none';
     }
     
-    document.getElementById('question-text').innerText = qData.question;
+    let formattedQ = qData.question.replace(/([:;])\s*(?=\(\d+\))/g, '$1<br>&nbsp;&nbsp;&nbsp;&nbsp;');
+    document.getElementById('question-text').innerHTML = formattedQ;
     
     const optionsContainer = document.getElementById('options-container');
     optionsContainer.innerHTML = ''; 
@@ -577,7 +578,8 @@ function renderStudyGuideList(qArr, container, startIndex) {
         
         const qTitle = document.createElement('p');
         qTitle.className = 'guide-q';
-        qTitle.innerText = `Câu ${currentIndex + 1}: ${qData.question}`;
+        let formattedQ = qData.question.replace(/([:;])\s*(?=\(\d+\))/g, '$1<br>&nbsp;&nbsp;&nbsp;&nbsp;');
+        qTitle.innerHTML = `<strong>Câu ${currentIndex + 1}:</strong> ${formattedQ}`;
         card.appendChild(qTitle);
 
         qData.options.forEach((optText, optIndex) => {
