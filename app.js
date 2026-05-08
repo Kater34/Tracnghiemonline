@@ -650,4 +650,63 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
+    // ----------------------------------------
+    // PHỤC HỒI TIẾN TRÌNH SAU KHI AUTO UPDATE
+    // ----------------------------------------
+    const backupStr = sessionStorage.getItem('quizBackup');
+    if (backupStr) {
+        sessionStorage.removeItem('quizBackup'); // Xóa để không bị vòng lặp
+        try {
+            const backup = JSON.parse(backupStr);
+            currentSubject = backup.currentSubject;
+            currentSubjectTitle = backup.currentSubjectTitle;
+            currentQIndex = backup.currentQIndex;
+            questions = backup.questions;
+            userAnswers = backup.userAnswers;
+            isQuizFinished = backup.isQuizFinished;
+            currentFilter = backup.currentFilter;
+            isTestMode = backup.isTestMode;
+            timeLeft = backup.timeLeft;
+
+            document.getElementById('quiz-header-title').innerText = isTestMode ? "Đang thi thử" : currentSubjectTitle;
+            
+            if (isTestMode && !isQuizFinished) {
+                document.getElementById('timer-display').innerText = formatTime(timeLeft);
+                if (timerInterval) clearInterval(timerInterval);
+                timerInterval = setInterval(() => {
+                    timeLeft--;
+                    document.getElementById('timer-display').innerText = formatTime(timeLeft);
+                    if (timeLeft <= 0) {
+                        clearInterval(timerInterval);
+                        alert("Hết thời gian làm bài! Hệ thống tự động nộp bài.");
+                        finishQuiz();
+                    }
+                }, 1000);
+            } else if (!isTestMode) {
+                document.getElementById('timer-display').innerText = '∞';
+            }
+
+            if (isQuizFinished) {
+                document.getElementById('finish-btn-desktop').innerText = 'Thoát';
+                document.getElementById('finish-btn-sidebar').innerText = 'Thoát xem lại';
+                document.getElementById('sidebar-tabs').style.display = 'flex';
+                document.getElementById('sidebar-legend').style.display = 'none';
+                document.getElementById('sidebar-legend-finished').style.display = 'flex';
+            } else {
+                document.getElementById('sidebar-tabs').style.display = 'none';
+                document.getElementById('sidebar-legend').style.display = 'flex';
+                document.getElementById('sidebar-legend-finished').style.display = 'none';
+                document.getElementById('finish-btn-desktop').innerText = 'Xong';
+                document.getElementById('finish-btn-sidebar').innerText = 'Nộp bài thi';
+            }
+
+            showView('view-quiz');
+            buildQuestionGrid();
+            filterGrid(currentFilter);
+            loadQuestion();
+        } catch(e) {
+            console.log('Lỗi phục hồi tiến trình:', e);
+        }
+    }
 });

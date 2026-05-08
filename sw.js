@@ -1,4 +1,4 @@
-const CACHE_NAME = 'tracnghiem-cache-v7';
+const CACHE_NAME = 'tracnghiem-cache-v9';
 
 // Danh sách các file cần tải ngầm và lưu trữ offline
 const urlsToCache = [
@@ -18,12 +18,29 @@ const urlsToCache = [
 
 // Sự kiện cài đặt Service Worker (Tiến hành lưu Cache)
 self.addEventListener('install', event => {
+  self.skipWaiting(); // Ép Service Worker mới thay thế ngay lập tức bản cũ
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(cache => {
         console.log('Đã lưu cache thành công!');
         return cache.addAll(urlsToCache);
       })
+  );
+});
+
+// Sự kiện kích hoạt (Xóa bỏ các bản Cache cũ kỹ)
+self.addEventListener('activate', event => {
+  event.waitUntil(
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames.map(cacheName => {
+          if (cacheName !== CACHE_NAME) {
+            console.log('Đang xóa cache cũ:', cacheName);
+            return caches.delete(cacheName);
+          }
+        })
+      );
+    }).then(() => self.clients.claim()) // Ép áp dụng ngay lập tức
   );
 });
 

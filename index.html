@@ -368,9 +368,44 @@
       });
     </script>
     
-    <!-- ĐĂNG KÝ SERVICE WORKER -->
+    <!-- ĐĂNG KÝ SERVICE WORKER & TỰ ĐỘNG CẬP NHẬT -->
     <script>
       if ('serviceWorker' in navigator) {
+        // Biến cờ để tránh việc reload trang liên tục
+        let refreshing = false;
+        navigator.serviceWorker.addEventListener('controllerchange', () => {
+          if (!refreshing) {
+            refreshing = true;
+            
+            // 1. Lưu lại toàn bộ quá trình làm bài hiện tại vào sessionStorage
+            if (typeof window.currentSubject !== 'undefined' && document.getElementById('view-quiz').classList.contains('active')) {
+                const backup = {
+                    currentSubject: window.currentSubject,
+                    currentSubjectTitle: window.currentSubjectTitle,
+                    currentQIndex: window.currentQIndex,
+                    questions: window.questions,
+                    userAnswers: window.userAnswers,
+                    isQuizFinished: window.isQuizFinished,
+                    currentFilter: window.currentFilter,
+                    isTestMode: window.isTestMode,
+                    timeLeft: window.timeLeft
+                };
+                sessionStorage.setItem('quizBackup', JSON.stringify(backup));
+            }
+
+            // 2. Hiện thông báo đang cập nhật (Full screen overlay)
+            const loadingDiv = document.createElement('div');
+            loadingDiv.style.cssText = 'position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.85); color:#fff; display:flex; flex-direction:column; justify-content:center; align-items:center; z-index:99999; font-family:sans-serif; text-align:center; padding:20px;';
+            loadingDiv.innerHTML = '<h2 style="color:#60a5fa; margin-bottom:10px;">Hệ thống đang tự động cập nhật...</h2><p style="font-size:16px;">Tiến trình làm bài của bạn đang được giữ nguyên.<br>Vui lòng đợi trong giây lát!</p>';
+            document.body.appendChild(loadingDiv);
+
+            // 3. Đợi 1.5 giây để người dùng kịp đọc rồi tải lại trang
+            setTimeout(() => {
+                window.location.reload();
+            }, 1500);
+          }
+        });
+
         window.addEventListener('load', () => {
           navigator.serviceWorker.register('sw.js').then(registration => {
             console.log('ServiceWorker đã được kích hoạt thành công!');
